@@ -1,0 +1,70 @@
+<div class="component">
+  <h1 class="mat-headline-4 p-2" style="color: #3f51b5"> Sorting </h1>
+
+  <!-- Reactive Form -->
+  <mat-card class="p-2 mb-4">
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSave()">
+
+      <div class="row">
+        <input placeholder="Length of the array" formControlName="length" class="form-control">
+
+        <span class="form-text text-danger" *ngIf="isValidField('length')">
+          The size of the array must be greater than 1
+        </span>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <h3 style="text-align: left;">Select sort method:</h3>
+
+        <mat-radio-group class="radio-group" formControlName="algorithm">
+          <mat-radio-button class="radio-button" *ngFor="let a of algorithms" value="{{ a }}">
+            {{ a }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <button class="button" type="submit" mat-raised-button color="primary" [disabled]="!myForm.valid">Generate and
+        Sort</button>
+    </form>
+
+  </mat-card>
+
+  <!-- Random Array Generated -->
+  <mat-card *ngIf="randomArray.length > 0" class="mb-4 p-2">
+    <button mat-icon-button class="button-icon" type="button" color="primary" (click)="this.showList1 = !this.showList1;">
+      <mat-icon *ngIf="showList1">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="!showList1">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <mat-card-title>Generated Array</mat-card-title>
+
+    <mat-card-subtitle style="color: #2196F3"> Time to order vector: {{ time }}</mat-card-subtitle>
+
+    <mat-grid-list cols="8" rowHeight="2rem" *ngIf="showList1">
+      <mat-grid-tile *ngFor="let i of randomArray">
+        {{ i }}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </mat-card>
+
+  <!-- Random Array Sorted -->
+  <mat-card *ngIf="sortedArray.length > 0" class="p-2">
+    <button mat-icon-button class="button-icon" type="button" color="primary" (click)="this.showList2 = !this.showList2;">
+      <mat-icon *ngIf="showList2">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="!showList2">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <mat-card-title>{{ selectedAlgorithm }}</mat-card-title>
+
+    <mat-card-subtitle style="color: #2196F3"> Time to order vector: {{ time }}</mat-card-subtitle>
+
+    <mat-grid-list cols="8" rowHeight="2rem" *ngIf="showList2">
+      <mat-grid-tile *ngFor="let i of sortedArray">
+        {{ i }}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </mat-card>
+
+</div>

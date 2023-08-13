@@ -1,0 +1,33 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar color="primary">
+      <span class="spacer"></span>
+      Sorting Algortihms App
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          {{ item.name }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button color="white" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div style="margin-left: auto;">
+      <a href="https://github.com/Thaniel/sorting-algorithms-app" target="_blank" style="text-decoration:none" class="github-link">
+        Thaniel
+        <img src="assets/github_icon_white.png" alt="Github logo"/>
+      </a>
+    </div>
+  </mat-toolbar>
+
+  <div class="container p-2">
+    <!-- Sirve para mostrar las routas hijas del componente sort -->
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

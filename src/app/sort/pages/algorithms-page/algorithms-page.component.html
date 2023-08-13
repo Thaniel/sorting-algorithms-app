@@ -1,0 +1,15 @@
+<div class="component">
+  <h1 class="mat-headline-4 p-2" style="color: #3f51b5"> Algortihms Code </h1>
+
+  <mat-card *ngFor="let algorithm of algorithms">
+    <mat-card-title class="p-2">{{ algorithm.name }}</mat-card-title>
+
+    <mat-card-subtitle class="p-2">Complexity: {{ algorithm.complexity }}</mat-card-subtitle>
+
+    <pre class="code" *ngFor="let code of algorithm.code">
+      <code [innerHTML]="code"></code>
+    </pre>
+
+  </mat-card>
+
+</div>
