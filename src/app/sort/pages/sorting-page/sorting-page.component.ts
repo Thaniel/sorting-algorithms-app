@@ -11,11 +11,12 @@ import * as sortingAlgorithms from '../../../shared/sortingAlgorithms';
 export class SortingPageComponent {
 
   public myForm: FormGroup = this.fb.group({
-    length: [1, [Validators.required, Validators.min(1)]],
+    length: [1, [Validators.required, Validators.min(1), Validators.max(100000)]],
     algorithm: ['', [Validators.required]],
   });
 
   public time: number = 0.0;
+  // public isCalculating: boolean = true;
   public randomArray: number[] = new Array<number>();
   public sortedArray: number[] = new Array<number>();
 
@@ -36,7 +37,6 @@ export class SortingPageComponent {
   }
 
   onSave(): void {
-
     if (this.myForm.invalid) {
       this.myForm.markAllAsTouched();
       return;
@@ -51,6 +51,7 @@ export class SortingPageComponent {
     const arrayLength = this.myForm.controls['length'].value;
     const algorithm = this.myForm.controls['algorithm'].value;
 
+    // this.isCalculating = true;
     this.time = 0;
 
     // Generate random array
@@ -99,6 +100,7 @@ export class SortingPageComponent {
 
     let t2 = new Date().getTime();
     this.time = (t2 - t1);
+    // this.isCalculating = false;
   }
 
 }

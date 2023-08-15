@@ -6,10 +6,10 @@
     <form class="form" [formGroup]="myForm" (ngSubmit)="onSave()">
 
       <div class="row">
-        <input placeholder="Length of the array" formControlName="length" class="form-control">
+        <input placeholder="Length of the array" formControlName="length" class="form-control" type="number">
 
         <span class="form-text text-danger" *ngIf="isValidField('length')">
-          The size of the array must be greater than 1
+          The size of the array must be greater than 1 and lower than 100000
         </span>
       </div>
 
@@ -29,9 +29,14 @@
 
   </mat-card>
 
+  <!--
+  <img *ngIf="isCalculating" src="assets/loader.svg" height="50" width="50" class="mt-3">
+  -->
+
   <!-- Random Array Generated -->
   <mat-card *ngIf="randomArray.length > 0" class="mb-4 p-2">
-    <button mat-icon-button class="button-icon" type="button" color="primary" (click)="this.showList1 = !this.showList1;">
+    <button mat-icon-button class="button-icon" type="button" color="primary"
+      (click)="this.showList1 = !this.showList1;">
       <mat-icon *ngIf="showList1">keyboard_arrow_up</mat-icon>
       <mat-icon *ngIf="!showList1">keyboard_arrow_down</mat-icon>
     </button>
@@ -50,7 +55,8 @@
 
   <!-- Random Array Sorted -->
   <mat-card *ngIf="sortedArray.length > 0" class="p-2">
-    <button mat-icon-button class="button-icon" type="button" color="primary" (click)="this.showList2 = !this.showList2;">
+    <button mat-icon-button class="button-icon" type="button" color="primary"
+      (click)="this.showList2 = !this.showList2;">
       <mat-icon *ngIf="showList2">keyboard_arrow_up</mat-icon>
       <mat-icon *ngIf="!showList2">keyboard_arrow_down</mat-icon>
     </button>

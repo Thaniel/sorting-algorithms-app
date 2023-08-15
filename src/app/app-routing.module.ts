@@ -6,7 +6,6 @@ const routes: Routes = [
     path:'',
     loadChildren: () => import('./sort/sort.module').then(m => m.SortModule),   // LazyLoading
   },
-
   {
     path:'**',
     redirectTo: ''
