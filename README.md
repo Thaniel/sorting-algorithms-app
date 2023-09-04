@@ -11,13 +11,13 @@ For the development of the application, Anuglar has been used. In addition to th
 
 ## Sort
 
-![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/sort.PNG)
+![alt text](https://github.com/Thaniel/sorting-algorithms-app/blob/main/img/sort.PNG)
 
 ## Sort View
-![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/sortView.PNG)
+![alt text](https://github.com/Thaniel/sorting-algorithms-app/blob/main/img/sortView.PNG)
 
 ## Algorithms
-![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/algorithms.PNG)
+![alt text](https://github.com/Thaniel/sorting-algorithms-app/blob/main/img/algorithms.PNG)
 
 ## Graph
-![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/graph.PNG)
+![alt text](https://github.com/Thaniel/sorting-algorithms-app/blob/main/img/graph.PNG)
