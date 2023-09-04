@@ -4,9 +4,6 @@ This project is a web application to visually show the different array sorting m
 
   [Sorting Algorithms App](https://sorting-algorithms-app.web.app/)
 
-![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/Home.PNG)
-
-
 ## Tools
 
 For the development of the application, Anuglar has been used. In addition to the Angular Material components and Prime NG components.
