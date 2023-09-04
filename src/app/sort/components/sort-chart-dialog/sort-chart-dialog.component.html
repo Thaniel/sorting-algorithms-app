@@ -1,0 +1,12 @@
+<div mat-dialog-title class="dialog_title">
+  <h2 class="text_dialog_title"> {{ algorithm.name }} </h2>
+
+  <button mat-icon-button (click)="close()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-card class="m-2" *ngIf="isDataLoad">
+  <h3 class="p-4"><strong>Complexity: </strong> {{ algorithm.complexity }} </h3>
+  <p-chart [type]="chartType" [data]="chartData" [options]="chartOptions" class="p-2"></p-chart>
+</mat-card>

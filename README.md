@@ -1,27 +1,26 @@
-# SortingAlgorithmsApp
+# Sorting Algorithms App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+This project is a web application to visually show the different array sorting methods, also the code of the different methods in the closest version to the psudocode and a comparison between the different methods.
 
-## Development server
+  [Sorting Algorithms App](https://sorting-algorithms-app.web.app/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/Home.PNG)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tools
 
-## Build
+For the development of the application, Anuglar has been used. In addition to the Angular Material components and Prime NG components.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Sort
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/sort.PNG)
 
-## Running end-to-end tests
+## Sort View
+![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/sortView.PNG)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Algorithms
+![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/algorithms.PNG)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Graph
+![alt text](https://github.com/Thaniel/F1-APP/blob/main/img/graph.PNG)

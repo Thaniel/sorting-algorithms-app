@@ -17,8 +17,8 @@
         <h3 style="text-align: left;">Select sort method:</h3>
 
         <mat-radio-group class="radio-group" formControlName="algorithm">
-          <mat-radio-button class="radio-button" *ngFor="let a of algorithms" value="{{ a }}">
-            {{ a }}
+          <mat-radio-button class="radio-button" *ngFor="let a of algorithms" value="{{ a.name }}">
+            {{ a.name }}
           </mat-radio-button>
         </mat-radio-group>
       </div>

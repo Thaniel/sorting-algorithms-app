@@ -12,6 +12,7 @@ import { MapsRoutingModule } from './sort-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { SortingPageComponent } from './pages/sorting-page/sorting-page.component';
+import { SortChartDialogComponent } from './components/sort-chart-dialog/sort-chart-dialog.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SortingPageComponent } from './pages/sorting-page/sorting-page.componen
     LayoutComponent,
     SideMenuComponent,
     SortingPageComponent,
+    SortChartDialogComponent,
   ],
   imports: [
     CommonModule,

@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./graph-page.component.css']
 })
 export class GraphPageComponent implements OnInit {
-  data: any;
 
-  options: any;
+  public data: any;
+  public options: any;
 
   ngOnInit() {
       const documentStyle = getComputedStyle(document.documentElement);
